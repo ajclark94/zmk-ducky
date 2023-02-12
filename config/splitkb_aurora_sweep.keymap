@@ -82,7 +82,7 @@
      &kp EXCL         &kp AT         &kp HASH               &kp DLLR        &kp PERCENT     &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &kp KP_PLUS
 &kp BACKSLASH       &kp PIPE   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp KP_MINUS
     &kp CARET  &kp AMPERSAND  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE
-                                                               &mo 3             &trans           &trans            &none
+                                                   &kp DOUBLE_QUOTES   &kp SINGLE_QUOTE           &trans            &none
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
