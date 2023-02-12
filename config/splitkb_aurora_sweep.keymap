@@ -16,14 +16,9 @@
     combos {
         compatible = "zmk,combos";
 
-        SYM2 {
-            bindings = <&mo 3>;
-            key-positions = <33 32>;
-        };
-
         FUNCTION {
-            bindings = <&mo 4>;
-            key-positions = <30 31>;
+            bindings = <&mo 3>;
+            key-positions = <30 33>;
         };
 
         caps_word {
@@ -45,6 +40,16 @@
             bindings = <&kp ESC>;
             key-positions = <0 9>;
         };
+
+        grave_combo {
+            bindings = <&kp GRAVE>;
+            key-positions = <2 7>;
+        };
+
+        tilde_combo {
+            bindings = <&kp TILDE>;
+            key-positions = <12 17>;
+        };
     };
 
     keymap {
@@ -52,10 +57,10 @@
 
         BASE {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R                     &kp T      &kp Y  &kp U      &kp I    &kp O          &kp P
-&kp A  &kp S  &kp D  &kp F                     &kp G      &kp H  &kp J      &kp K    &kp L  &kp SEMICOLON
-&kp Z  &kp X  &kp C  &kp V                     &kp B      &kp N  &kp M  &kp COMMA  &kp DOT      &kp SLASH
-                     &mo 1  &mt LEFT_SHIFT BACKSPACE  &kp SPACE  &mo 2
+&kp Q  &kp W  &kp E      &kp R                     &kp T      &kp Y        &kp U      &kp I    &kp O          &kp P
+&kp A  &kp S  &kp D      &kp F                     &kp G      &kp H        &kp J      &kp K    &kp L  &kp SEMICOLON
+&kp Z  &kp X  &kp C      &kp V                     &kp B      &kp N        &kp M  &kp COMMA  &kp DOT      &kp SLASH
+                     &lt 1 TAB  &mt LEFT_SHIFT BACKSPACE  &kp SPACE  &lt 2 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
@@ -63,10 +68,10 @@
 
         EXTEND {
             bindings = <
-     &kp ESC    &kp K_BACK      &kp K_FIND     &kp K_FORWARD    &kp INS      &kp PAGE_UP       &kp HOME    &kp UP     &kp END   &kp CAPS
-&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL     &trans    &kp PAGE_DOWN       &kp LEFT  &kp DOWN   &kp RIGHT    &kp DEL
-   &kp LC(Z)     &kp LC(X)       &kp LC(C)          &kp LGUI  &kp LC(V)  &kp PRINTSCREEN  &kp BACKSPACE   &kp TAB  &kp K_MENU  &kp ENTER
-                                                       &none     &trans        &kp ENTER         &trans
+     &kp ESC    &kp K_BACK      &kp K_FIND     &kp K_FORWARD    &kp INS    &kp PAGE_UP  &kp HOME  &kp BACKSPACE     &kp END   &kp CAPS
+&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL     &trans  &kp PAGE_DOWN  &kp LEFT         &kp UP    &kp DOWN  &kp RIGHT
+   &kp LC(Z)     &kp LC(X)       &kp LC(C)          &kp LGUI  &kp LC(V)         &trans   &kp DEL        &kp TAB  &kp K_MENU  &kp ENTER
+                                                       &none     &trans         &trans     &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
@@ -75,20 +80,9 @@
         SYM {
             bindings = <
      &kp EXCL         &kp AT         &kp HASH               &kp DLLR        &kp PERCENT     &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &kp KP_PLUS
-&kp SEMICOLON      &kp COLON   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp KP_MINUS
+&kp BACKSLASH       &kp PIPE   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp KP_MINUS
     &kp CARET  &kp AMPERSAND  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE
-                                                              &trans             &trans           &trans            &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
-        };
-
-        SYM2 {
-            bindings = <
-   &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp GRAVE  &kp TILDE  &kp BACKSLASH  &kp PIPE  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans   &none  &trans   &none
+                                                               &mo 3             &trans           &trans            &none
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
@@ -99,7 +93,7 @@
   &kp K_STOP      &kp C_RW      &kp C_PLAY          &kp C_FF  &kp C_BRIGHTNESS_INC    &kp F12  &kp F7  &kp F8  &kp F9   &kp LC(PLUS)
 &sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(MINUS)
   &kp K_MUTE  &kp K_VOL_DN   &kp LC(LS(C))      &kp K_VOL_UP         &kp LC(LS(V))    &kp F10  &kp F1  &kp F2  &kp F3     &kp LC(N0)
-                                                       &none                &trans  &kp ENTER   &none
+                                                       &none                 &none  &kp ENTER  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
