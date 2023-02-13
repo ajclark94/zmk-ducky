@@ -16,11 +16,6 @@
     combos {
         compatible = "zmk,combos";
 
-        FUNCTION {
-            bindings = <&mo 3>;
-            key-positions = <30 33>;
-        };
-
         caps_word {
             bindings = <&caps_word>;
             key-positions = <10 19>;
@@ -68,10 +63,10 @@
 
         EXTEND {
             bindings = <
-     &kp ESC    &kp K_BACK      &kp K_FIND     &kp K_FORWARD    &kp INS  &trans    &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL     &trans  &trans          &kp LEFT             &kp UP              &kp DOWN              &kp RIGHT
-   &kp LC(Z)     &kp LC(X)       &kp LC(C)          &kp LGUI  &kp LC(V)  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp LESS_THAN       &kp GREATER_THAN
-                                                       &mo 3     &trans  &trans             &none
+     &kp ESC    &kp K_BACK      &kp K_FIND     &kp K_FORWARD        &kp INS  &trans    &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LS(LCTRL)  &trans          &kp LEFT             &kp UP              &kp DOWN              &kp RIGHT
+   &kp LC(Z)     &kp LC(X)       &kp LC(C)          &kp LGUI      &kp LC(V)  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp LESS_THAN       &kp GREATER_THAN
+                                                      &trans         &trans  &trans             &none
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
@@ -79,10 +74,10 @@
 
         SYM {
             bindings = <
-       &trans         &kp AT          &kp HASH           &kp DLLR  &trans     &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &kp KP_PLUS
-&kp BACKSLASH       &kp PIPE          &kp EXCL        &kp PERCENT  &trans  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp KP_MINUS
-    &kp CARET  &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE
-                                                           &trans  &trans            &none           &trans
+       &trans         &kp AT          &kp HASH           &kp DLLR  &trans  &kp EQUAL  &kp N7  &kp N8  &kp N9   &kp PLUS
+&kp BACKSLASH       &kp PIPE          &kp EXCL        &kp PERCENT  &trans  &kp ASTRK  &kp N4  &kp N5  &kp N6  &kp MINUS
+    &kp CARET  &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans     &kp N0  &kp N1  &kp N2  &kp N3  &kp SLASH
+                                                           &trans  &trans      &none  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
@@ -90,10 +85,10 @@
 
         FUNCTION {
             bindings = <
-  &kp K_STOP      &kp C_RW      &kp C_PLAY          &kp C_FF  &kp C_BRIGHTNESS_INC    &kp F12  &kp F7  &kp F8  &kp F9   &kp LC(PLUS)
-&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(MINUS)
-  &kp K_MUTE  &kp K_VOL_DN   &kp LC(LS(C))      &kp K_VOL_UP         &kp LC(LS(V))    &kp F10  &kp F1  &kp F2  &kp F3     &kp LC(N0)
-                                                       &none                 &none  &kp ENTER  &trans
+  &kp K_STOP      &kp C_RW      &kp C_PLAY          &kp C_FF  &kp C_BRIGHTNESS_INC     &kp F12  &kp F7  &kp F8  &kp F9   &kp LC(PLUS)
+&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &kp C_BRIGHTNESS_DEC     &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(MINUS)
+  &kp K_MUTE  &kp K_VOL_DN   &kp LC(LS(C))      &kp K_VOL_UP         &kp LC(LS(V))     &kp F10  &kp F1  &kp F2  &kp F3     &kp LC(N0)
+                                                       &none                &trans  &kp KP_NUM  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
