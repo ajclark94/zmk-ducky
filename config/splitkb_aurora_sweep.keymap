@@ -96,7 +96,7 @@
         FUNCTION {
             bindings = <
   &kp K_STOP      &kp C_RW      &kp C_PLAY          &kp C_FF  &kp C_BRIGHTNESS_INC     &kp F12  &kp F7  &kp F8  &kp F9   &kp LC(PLUS)
-&sk LEFT_ALT  &sk LEFT_GUI  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &kp C_BRIGHTNESS_DEC     &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(MINUS)
+&kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp C_BRIGHTNESS_DEC     &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(MINUS)
   &kp K_MUTE  &kp K_VOL_DN   &kp LC(LS(C))      &kp K_VOL_UP         &kp LC(LS(V))     &kp F10  &kp F1  &kp F2  &kp F3     &kp LC(N0)
                                                        &none                &trans  &kp KP_NUM  &trans
             >;
