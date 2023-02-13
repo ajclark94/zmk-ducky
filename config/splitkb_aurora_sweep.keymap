@@ -84,10 +84,10 @@
 
         SYM {
             bindings = <
-     &kp PERCENT             &kp AT        &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AMPS  &kp EQUAL      &kp N7  &kp N8  &kp N9   &kp PLUS
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp EXCL  &kp ASTRK      &kp N4  &kp N5  &kp N6  &kp MINUS
-        &kp BSLH           &kp PIPE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp CARET     &kp N0      &kp N1  &kp N2  &kp N3  &kp SLASH
-                                                                           &none     &trans   &kp HASH  &kp DOLLAR
+     &kp PERCENT             &kp AT        &kp LEFT_BRACE        &kp RIGHT_BRACE   &kp AMPS  &kp EQUAL  &kp N7  &kp N8  &kp N9    &kp PLUS
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp EXCL  &kp ASTRK  &kp N4  &kp N5  &kp N6    &kp HASH
+        &kp BSLH           &kp PIPE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp CARET     &kp N0  &kp N1  &kp N2  &kp N3  &kp DOLLAR
+                                                                           &none      &none     &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
